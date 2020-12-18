@@ -149,6 +149,71 @@ router.post(
         )
     }
 )
+
+router.post(
+    '/update',
+    (req, res) => {
+
+        const formData = {  
+            firstName: req.body.firstName,
+            lastName: req.body.lastName,
+            email: req.body.email,
+            phoneNumber: req.body.phoneNumber,
+            addressLine1: req.body.addressLine1,
+            addressLine2: req.body.addressLine2,
+            addressLine3: req.body.addressLine3,
+            city: req.body.city,
+            state: req.body.state,
+            zipCode: req.body.zipCode,
+            country: req.body.country,
+            preferredTime: req.body.preferredTime,
+            isUnderage: req.body.isUnderage
+        };
+
+
+        const filter = {email: formData.email};
+        const options = {upsert : false};
+        const updateDoc = {
+            $set:{
+                firstName: formData.firstName,
+                lastName: formData.lastName,
+                email: formData.email,
+                phoneNumber: formData.phoneNumber,
+                addressLine1: formData.addressLine1,
+                addressLine2: formData.addressLine2,
+                addressLine3: formData.addressLine3,
+                city: formData.city,
+                state: formData.state,
+                zipCode: formData.zipCode,
+                country: formData.country,
+                preferredTime: formData.preferredTime,
+                isUnderage: formData.isUnderage
+            }
+        }
+
+        UserModel
+         .updateOne( filter, updateDoc, options)
+         .then(
+             (document) =>{
+                 res.send(document)
+             }
+         )
+         .catch(
+             (error) => {
+                 if(error){
+                     console.log(error)
+                 }
+                 else
+                 {
+                     console.log(document)
+                 }
+             }
+         )
+
+
+    }
+)
+
 router.get(
     '/profile',
     passport.authenticate('jwt', {session: false}),
@@ -170,6 +235,8 @@ router.get(
 
     }
 )
+
+
 
 router.get(
     '/',               // https://www.app.com/users
