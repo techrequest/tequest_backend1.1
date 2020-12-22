@@ -28,21 +28,21 @@ const UserSchema = new mongoose.Schema(
             type: String,
             required: true
         },
-        addressLine2: {
-            type: String,
-            required: true
-        },
-        addressLine3: {
-            type: String,
-            required: false
-        },
+        // addressLine2: {
+        //     type: String,
+        //     required: false
+        // },
+        // addressLine3: {
+        //     type: String,
+        //     required: false
+        // },
         city: {
             type: String,
             required: true
         },
         state: {
             type: String,
-            required: false
+            required: true
         },
         zipCode: {
             type: Number,
@@ -52,19 +52,19 @@ const UserSchema = new mongoose.Schema(
             type: String,
             required: true
         },
-        preferredTime: {
-            type: Date,
+        // preferredTime: {
+        //     type: Date,
 
-        },
-        isUnderage: {
-            type: Boolean,
-            required: true,
-            default: false
-        },
-        dateCreated: {
-            type: Date,
-            default: Date.now
-        }
+        // },
+        // isUnderage: {
+        //     type: Boolean,
+        //     required: false,
+        //     default: false
+        // },
+        // dateCreated: {
+        //     type: Date,
+        //     default: Date.now
+        // }
 
         
     }

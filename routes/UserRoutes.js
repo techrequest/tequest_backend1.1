@@ -18,14 +18,14 @@ router.post(
             password: req.body.password,
             phoneNumber: req.body.phoneNumber,
             addressLine1: req.body.addressLine1,
-            addressLine2: req.body.addressLine2,
-            addressLine3: req.body.addressLine3,
+            // addressLine2: req.body.addressLine2,
+            // addressLine3: req.body.addressLine3,
             city: req.body.city,
             state: req.body.state,
             zipCode: req.body.zipCode,
             country: req.body.country,
-            preferredTime: req.body.preferredTime,
-            isUnderage: req.body.isUnderage
+            // preferredTime: req.body.preferredTime,
+            // isUnderage: req.body.isUnderage
 
         };
 
@@ -160,14 +160,14 @@ router.post(
             email: req.body.email,
             phoneNumber: req.body.phoneNumber,
             addressLine1: req.body.addressLine1,
-            addressLine2: req.body.addressLine2,
-            addressLine3: req.body.addressLine3,
+            // addressLine2: req.body.addressLine2,
+            // addressLine3: req.body.addressLine3,
             city: req.body.city,
             state: req.body.state,
             zipCode: req.body.zipCode,
             country: req.body.country,
-            preferredTime: req.body.preferredTime,
-            isUnderage: req.body.isUnderage
+            // preferredTime: req.body.preferredTime,
+            // isUnderage: req.body.isUnderage
         };
 
 
@@ -180,14 +180,14 @@ router.post(
                 email: formData.email,
                 phoneNumber: formData.phoneNumber,
                 addressLine1: formData.addressLine1,
-                addressLine2: formData.addressLine2,
-                addressLine3: formData.addressLine3,
+                // addressLine2: formData.addressLine2,
+                // addressLine3: formData.addressLine3,
                 city: formData.city,
                 state: formData.state,
                 zipCode: formData.zipCode,
                 country: formData.country,
-                preferredTime: formData.preferredTime,
-                isUnderage: formData.isUnderage
+                // preferredTime: formData.preferredTime,
+                // isUnderage: formData.isUnderage
             }
         }
 
